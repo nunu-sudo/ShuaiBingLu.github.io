@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        rabbitmq的安装 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> I ring in my coding ,My heart is with you </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>Bingzzz</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-rabbitmq的安装"><span class="toc-text">一.rabbitmq的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-配置代理"><span class="toc-text">1.配置代理</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-配置源文件"><span class="toc-text">2.配置源文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-安装基本的软件"><span class="toc-text">3.安装基本的软件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-安装Erlang依赖的软件包"><span class="toc-text">4.安装Erlang依赖的软件包</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-安装Erlang"><span class="toc-text">5.安装Erlang</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#6-安装rabbitmq和simplejson"><span class="toc-text">6.安装rabbitmq和simplejson</span></a></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#二-rabbitmq的集群"><span class="toc-text">二.rabbitmq的集群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-rabbitmq-jsonrpc的启动和配置"><span class="toc-text">三.rabbitmq_jsonrpc的启动和配置</span></a></li>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> I ring in my coding ,My heart is with you </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        rabbitmq的安装
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-06-08 22:21:00</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h3 id="一-rabbitmq的安装"><a href="#一-rabbitmq的安装" class="headerlink" title="一.rabbitmq的安装"></a>一.rabbitmq的安装</h3><h6 id="1-配置代理"><a href="#1-配置代理" class="headerlink" title="1.配置代理"></a>1.配置代理</h6><p>创建/etc/apt.conf文件<br>Acquire::http::Proxy”<a href="http://proxy.gnetis.com:3128/&quot;" target="_blank" rel="noopener">http://proxy.gnetis.com:3128/&quot;</a>;</p>
+<h6 id="2-配置源文件"><a href="#2-配置源文件" class="headerlink" title="2.配置源文件"></a>2.配置源文件</h6><p>修改/etc/apt/sources.list<br>deb <a href="http://192.168.11.202/ubuntu" target="_blank" rel="noopener">http://192.168.11.202/ubuntu</a> hardy main restricted universe multiverse<br>deb <a href="http://192.168.11.202/ubuntu" target="_blank" rel="noopener">http://192.168.11.202/ubuntu</a> hardy-updates main restricted universe multiverse<br>deb <a href="http://192.168.11.202/ubuntu" target="_blank" rel="noopener">http://192.168.11.202/ubuntu</a> hardy-backports main restricted universe multiverse<br>deb <a href="http://192.168.11.202/ubuntu" target="_blank" rel="noopener">http://192.168.11.202/ubuntu</a> hardy-security main restricted universe multiverse<br>deb <a href="http://192.168.11.202/ubuntu" target="_blank" rel="noopener">http://192.168.11.202/ubuntu</a> hardy-proposed main restricted universe multiverse<br>更新源 aptitude update</p>
+<h6 id="3-安装基本的软件"><a href="#3-安装基本的软件" class="headerlink" title="3.安装基本的软件"></a>3.安装基本的软件</h6><p>sudo apt-get install build-essential<br>sudo apt-get install sun-java6-jdk<br>sudo apt-get install zip<br>sudo apt-get install unzip</p>
+<h6 id="4-安装Erlang依赖的软件包"><a href="#4-安装Erlang依赖的软件包" class="headerlink" title="4.安装Erlang依赖的软件包"></a>4.安装Erlang依赖的软件包</h6><p>sudo apt-get install libncurses5-dev<br>sudo apt-get install m4<br>sudo apt-get install libssl-dev<br>sudo apt-get install libc6<br>sudo apt-get install unixodbc unixodbc-dev<br>sudo apt-get install freeglut3-dev libwxgtk2.8-dev<br>sudo apt-get install xsltproc<br>sudo apt-get install fop<br>sudo apt-get install xmlto<br>sudo apt-get install python</p>
+<h6 id="5-安装Erlang"><a href="#5-安装Erlang" class="headerlink" title="5.安装Erlang"></a>5.安装Erlang</h6><p>下载安装ERLANG源代码(otp_src_R15B.tar.gz)<br> tar -xvf otp_src_R15B.tar.gz<br> cd otp_src_R15B<br> sudo ./configure<br> sudo make<br> sudo make install<br>然后修改/etc/profile，添加如下<br> export PATH=/usr/local/bin:$PATH<br> 能够source /etc/profile一下，及时修改PATH</p>
+<h6 id="6-安装rabbitmq和simplejson"><a href="#6-安装rabbitmq和simplejson" class="headerlink" title="6.安装rabbitmq和simplejson"></a>6.安装rabbitmq和simplejson</h6><p>安装simplejson<br>tar xvzf simplejson-2.3.2.tar.gz<br>cd simplejson-2.3.2<br>sudo python setup.py install</p>
+<p>安装RabbitMQ Server<br>tar xvzf rabbitmq-server-2.7.1.tar.gz<br>cd rabbitmq-server-2.7.1<br>make TARGET_DIR=/usr/local SBIN_DIR=/usr/local/sbin MAN_DIR=/usr/local/man install<br>启动rabbitmq: 在安装目录下的scripts目录中运行 ./rabbitmq-server start &amp;<br>关闭rabbitmq: 在安装目录下的scripts目录中运行 ./rabbitmqctl stop</p>
+<h3 id="二-rabbitmq的集群"><a href="#二-rabbitmq的集群" class="headerlink" title="二.rabbitmq的集群"></a>二.rabbitmq的集群</h3><p>一个rabbitmq集 群中可以共享 user，vhost，queue，exchange等，所有的数据和状态都是必须在所有节点上复制的，一个例外是，那些当前只属于创建它的节点的消息队列，尽管它们可见且可被所有节点读取。rabbitmq节点可以动态的加入到集群中，一个节点它可以加入到集群中，也可以从集群环集群会进行一个基本的负载均衡。<br>集群中有两种节点：<br>1 内存节点：只保存状态到内存（一个例外的情况是：持久的queue的持久内容将被保存到disk）<br>2 磁盘节点：保存状态到内存和磁盘。<br>内存节点虽然不写入磁盘，但是它执行比磁盘节点要好。集群中，只需要一个磁盘节点来保存状态 就足够了<br>如果集群中只有内存节点，那么不能停止它们，否则所有的状态，消息等都会丢失。<br>Rabbitmq的集群是依赖于erlang的集群来工作的，所以必须先构建起erlang的集群环境。Erlang的集群中各节点是通过一个magic cookie来实现的，这个cookie存放在$HOME/.Erlang.cookie 中，文件是400的权限。所以必须保证各节点cookie保持一致，否则节点之间就无法通信。<br>-r——– 1 long long    21 Aug 1 08:08 .erlang.cookie<br>1 将其中一台节点上的.erlang.cookie值复制下来保存到其他节点上。或者使用scp的方法也可，但是要注意文件的权限和属主属组。<br>$ cat .erlang.cookie<br>IYZNFNJIUWABJUELIUFE<br>将值保存到其他节点上:<br>先更改文件权限，给予其可写权限：<br>$chmod 700 .erlang.cookie<br>$ echo -n “ IYZNFNJIUWABJUELIUFE” &gt;$HOME/.erlang.cookie<br>$chmod 400 .erlang.cookie<br>PS：此步骤建议在rabbitmq启动之前完成。<br>2 确保节点之间主机名称可以相互解析。<br>vi /etc/hosts 将其他主机的ip和主机名对应起来<br>192.168.<strong>.</strong>   mq3<br>192.168. <strong>.</strong>   mq1<br>192.168. <strong>.</strong>   mq2<br>前期准备工作已经完成，下面就来开始rabbitmq集群的配置，有了erliang的集群环境，rabbitmq集群环境构建起来很简单，只需要把其他节点添加到一台节点中即可，这里采用将mq3，mq2添加到mq1上的方法。<br> 只需简单的几步即可。如无特殊说明，以下步骤在APP2和APP1上都要做。<br>$cd /u/rabbitmq/sbin<br>$./rabbitmq-server –detached //三个节点都启动<br>$./rabbitmqctl status   //查看状态<br>$./rabbitmqctl stop_app<br>$./rabbitmqctl reset<br>在 mq2和mq3上：<br>$./rabbitmqctl cluster rabbit@mq1 rabbit@mq2<br>$./rabbitmqctl cluster rabbit@mq1 rabbit@mq3<br>$./rabbitmqctl start_app<br>在mq2和mq3上查看集群状态：<br>$<strong>**</strong>/script/rabbitmqctl cluster_status<br>Cluster status of node rabbit@mq3 …<br>[{nodes,[{disc,[rabbit@mq3,rabbit@mq2,rabbit@mq1]}]},<br> {running_nodes,[rabbit@mq1,rabbit@mq2,rabbit@mq3]}]<br>…done.</p>
+<h3 id="三-rabbitmq-jsonrpc的启动和配置"><a href="#三-rabbitmq-jsonrpc的启动和配置" class="headerlink" title="三.rabbitmq_jsonrpc的启动和配置"></a>三.rabbitmq_jsonrpc的启动和配置</h3><p>在安装rabbitmq的目录下的scripts目录中运行 ./ rabbitmq-plugins rabbitmq_jsonrpc<br>在linux下查看jsonrpc_web的端口号：netstat -plan |grep 55670<br>访问地址:<a href="http://localhost:55670" target="_blank" rel="noopener">http://localhost:55670</a><br>注：该55670的端口号不容易该成80 ，如果需要80的话，要在前面配置apache的反向代理</p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/ai-er-lan-xue-da">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/linruo1004">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

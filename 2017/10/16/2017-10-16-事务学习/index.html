@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        事务学习 - undefined
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -81,6 +81,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#事务"><span class="toc-text">事务</span></a></li></ol>
+</div>
+    
 </div>
 
 
@@ -104,158 +108,52 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-10-31</div>
-        <div class="post-info">
-            <a href="/2018/10/31/oracle常用函数/">
-                <h3>
-                    oracle常用函数
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        事务学习
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-10-31</div>
-        <div class="post-info">
-            <a href="/2018/10/31/hello-world/">
-                <h3>
-                    Hello World
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2017-10-16 17:06:41</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-08-17</div>
-        <div class="post-info">
-            <a href="/2018/08/17/2018-08-17-策略模式/">
-                <h3>
-                    策略模式（Strategy Pattern）
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-06-20</div>
-        <div class="post-info">
-            <a href="/2018/06/20/2018-06-20-szookeeper简单介绍/">
-                <h3>
-                    zookeeper简单介绍
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-06-19</div>
-        <div class="post-info">
-            <a href="/2018/06/19/2018-06-19-Spring操作redis/">
-                <h3>
-                    Spring操作Redis
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-06-08</div>
-        <div class="post-info">
-            <a href="/2018/06/08/2018-06-06-rabbitmq安装/">
-                <h3>
-                    rabbitmq的安装
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-06-06</div>
-        <div class="post-info">
-            <a href="/2018/06/06/2018-06-08-项目中遇到的hibernate问题/">
-                <h3>
-                    项目中遇到的hibernate问题
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-05-20</div>
-        <div class="post-info">
-            <a href="/2018/05/20/2018-05-10-适配器模式/">
-                <h3>
-                    适配器模式
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-04-20</div>
-        <div class="post-info">
-            <a href="/2018/04/20/2018-04-10-门面设计模式/">
-                <h3>
-                    门面设计模式
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-04-06</div>
-        <div class="post-info">
-            <a href="/2018/04/06/2018-04-06-redis数据类型/">
-                <h3>
-                    Redis数据类型
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-</div>
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page/2/">Older Posts &rarr;</a>
-    </li>
-    
+    <div class="post-content ">
+        <h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><p>事务是以可控的方式对数据资源（数据库，文件等存储介质）进行访问的一组操作。</p>
+<ol>
+<li>事务的4个特性（acid）</li>
+</ol>
+<ul>
+<li>原子性：所有的操作是不可分割的整体；</li>
+<li>一致性：事务的执行前后对数据的操作需要保持一致；</li>
+<li>隔离性：主要面向对数据资源访问的并发性，也需要数据的一致性。当超过两个以上的事务访问数据资源时，不同的隔离级别决定了各个事务对数据资源访问的不同行为；事务的按照隔离级别的强弱依次为Read UnCommitted, Read Committed,Repeatable Read 和Serializable.<br>Read UnCommitted:最低的隔离级别，一个事务可以读取另一个事务没有提交的更新结果。其会造成脏读，不可重复度，幻读。<br>Read Committed:是大部分数据库默认采取的隔离级别，一个事务在更新提交后，另外一个事务才可能督导更新后的结果。无法避免不可重复读和幻读。<br>Repeatable Read:保证在多个事务下，对同一个数据的读取是相等的。无法避免幻读。<br>Serializable,最严格的隔离级别，所有的事务都是按照顺序进行。</li>
+<li>持久性:一旦事务提交成功，是不可回退的。</li>
+</ul>
+<ol start="2">
+<li>一些解释</li>
+</ol>
+<ul>
+<li>脏读（Dirty Read）：A事务读取B事务尚未提交的数据并在此基础上操作，而B事务执行回滚，那么A读取到的数据就是脏数据。</li>
+<li>不可重复读（Unrepeatable Read）：事务A重新读取前面读取过的数据，发现该数据已经被另一个已提交的事务B修改过了。</li>
+<li>幻读（Phantom Read）：事务A重新执行一个查询，返回一系列符合查询条件的行，发现其中插入了被事务B提交的行。</li>
 </ul>
 
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
     </div>
 </div>
 
@@ -310,12 +208,31 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
 
 
 

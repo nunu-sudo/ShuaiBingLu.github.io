@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Mysql数据类型 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> I ring in my coding ,My heart is with you </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>Bingzzz</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#事务"><span class="toc-text">事务</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-整数类型"><span class="toc-text">1.整数类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-实数类型"><span class="toc-text">2.实数类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-字符串类型"><span class="toc-text">3.字符串类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-枚举类型"><span class="toc-text">4.枚举类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-时间类型"><span class="toc-text">5.时间类型</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> I ring in my coding ,My heart is with you </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Mysql数据类型
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-03-03 18:16:41</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><blockquote>
+<p>摘要：要了解MySQL数据库，首先得了解MySQL数据库所支持的数据类型，其中包含整数类型，实数类型，字符串类型，枚举类型，时间类型。</p>
+</blockquote>
+<h5 id="1-整数类型"><a href="#1-整数类型" class="headerlink" title="1.整数类型"></a>1.整数类型</h5><p>整数类型主要包含TINYINT(1 Bytes)，SMALLINT(2 Bytes)，MEDIUMINT(3 Bytes)，INT(4 Bytes)，BIGINT(8 Bytes)。</p>
+<p>整数类型可以选择 UNSIGNED 属性，表示不允许负数，这样可以使得正数的上限提高一倍。举个例子，INT 的存储范围是 -2-31 ~ 231 - 1,</p>
+<p>也就是 -2147483648 ~ 2147483647，那么 UNSIGNED INT 可以存储的范围就是 0 ~ 263 - 1，即 0 ~ 9223372036854775807。</p>
+<p>整数类型可以指定宽度，其实是没有意义的，它不会限制整数类型的合法范围。如果不显示地指定宽度，则默认为 INT(11)。会误认为 INT(11) 指定整数类型的长度是 11 位，这个想法是错误的。</p>
+<p>更小的数据类型通常更快，因为占用更少的磁盘空间。如果需要存储性别状态（1-男；2-女；99-未知），这个时候应该优先考虑 TINYINT，而不是 INT，因为 TINYINT 占用更少的磁盘空间。因此，需要选择合适的整数类型来减少占用的磁盘空间，而不是选择全部使用 INT 或 BIGINT。</p>
+<h5 id="2-实数类型"><a href="#2-实数类型" class="headerlink" title="2.实数类型"></a>2.实数类型</h5><p>主要有FLOAT（4 Bytes），DOUBLE(8 Bytes)，DECIMAL</p>
+<p>FLOAT(M,D) 和 DOUBLE(M,D) 表示一共显示 M 位整数，D 位小数。举个例子，FLOAT(5,2) 可以显示为 100.99，MySQL 保存时会进行四舍五入，因此，如果值为 100.0099， 会保存近似结果 100.01。</p>
+<p>FLOAT 只保证 6 位有效数字的准确性，所以 FLOAT(M,D) 中，M&lt;=6 时，数字通常是准确的。</p>
+<p>DOUBLE 只保证 16 位有效数字的准确性，所以 DOUBLE(M,D) 中，M&lt;=16 时，数字通常是准确的。</p>
+<p>在使用实数类型，要重点考虑精度问题。DOUBLE 是 MySQL 内部浮点计算的类型，它比 FLOAT 有更高的精度和更大的范围，但是 FLOAT 和 DOUBLE 都是不精确的，如果要实现精确浮点运算，就需要使用 DECIMAL 类型。</p>
+<p>因此，如果需要考虑精度问题，优先考虑 DECIMAL 类型。如果对精度问题不是特别敏感，可以考虑使用 FLOAT 或者 DOUBLE 类型。</p>
+<h5 id="3-字符串类型"><a href="#3-字符串类型" class="headerlink" title="3.字符串类型"></a>3.字符串类型</h5><p>对于实数类型，可以使用 CHAR、 VARCHAR、 BLOB、 TEXT 等。</p>
+<p>CHAR 类型是定长的。MySQL 会根据定义的长度分配空间。CHAR 长度可以是 0 到 255之间的值。</p>
+<p>VARCHAR 类型用于存储可变长字符串，它更加节省空间。值得注意的是， VARCHAR 实际上会使用 1 或 2 个额外字节记录字符串的长度。VARCHAR 长度可以指定 0 到 65535 之间的值。</p>
+<p>BLOB 和 TEXT 主要用来存储大文本，分别采用二进制和字符串方式存储。如果 BLOB 和 TEXT 还无法满足需求，还可以使用 TINYBLOB、 MEDIUMBLOB、 LONGBLOB、 TINYTEXT、 MEDIUMTEXT、 LONGTEXT。值得注意的是，它们不能够有默认值。</p>
+<p>对于字符串类型的使用场景，可以大概总结下。</p>
+<p>定长的字符串，可以选择 CHAR。举个例子，身份证是定长类型，那么选择 CHAR 是非常合适的。</p>
+<p>变长的字符串，可以选择 VARCHAR， 因为 VARCHAR 更加节省空间。</p>
+<p>存储大文本的场景，可以考虑使用 BLOB 和 TEXT。如果 BLOB 和 TEXT 还无法满足需求，还可以使用 TINYBLOB、 MEDIUMBLOB、 LONGBLOB、 TINYTEXT、 MEDIUMTEXT、 LONGTEXT。</p>
+<h5 id="4-枚举类型"><a href="#4-枚举类型" class="headerlink" title="4.枚举类型"></a>4.枚举类型</h5><p>实际上， 枚举类型保存的是整数类型，但其显示为字符串。如果将一个非法值插入，即允许的值之外的字符串，枚举类型将不允许操作，但是枚举类型允许空字符串和 NULL 类型。</p>
+<p>尽量不要使用枚举类型，因为枚举类型增加了维护成本。试想，如果需要增加新的枚举类型，需要全表更新，如果对于大数据量的更新场景，会造成锁表，这是多么恐怖的事情。</p>
+<h5 id="5-时间类型"><a href="#5-时间类型" class="headerlink" title="5.时间类型"></a>5.时间类型</h5><p>对于时间类型，MySQL 提供了丰富的数据类型： YEAR、 DATE、 TIME、 DATETIME、 TIMESTAMP。每个时间类型都对应着不同的时间格式。</p>
+<p>DATETIME 和 TIMESTAMP 都可以存储相同类型的数据，而 TIMESTAMP 只使用 DATETIME 一半的存储空间。通常情况下，建议优先考虑 TIMESTAMP，因为它的空间利用率更高。</p>
+<hr>
+<p>参考资料：<a href="http://blog.720ui.com/2017/mysql_core_01_data_type/" target="_blank" rel="noopener">http://blog.720ui.com/2017/mysql_core_01_data_type/</a></p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/ai-er-lan-xue-da">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/linruo1004">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://airclouds-blog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>
