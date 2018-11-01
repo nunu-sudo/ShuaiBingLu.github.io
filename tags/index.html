@@ -11,7 +11,7 @@
 
     <title>
         
-        Oracel常用函数 - undefined
+        Tags - undefined
         
     </title>
 
@@ -59,7 +59,7 @@
                     <span>主页</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
                     <span>标签</span>
@@ -80,10 +80,6 @@
             
         </ul>
     </div>
-    
-        <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#decode"><span class="toc-text">decode()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用sql"><span class="toc-text">常用sql</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#case-when-amp-amp-case-when"><span class="toc-text">case when &amp;&amp; case .. when</span></a></li></ol>
-</div>
     
 </div>
 
@@ -107,41 +103,13 @@
     
     <div class="index-middle">
         <!-- Main Content -->
-        
-
-
-<div class="post-container">
-    <div class="post-title">
-        Oracel常用函数
-    </div>
-
-    <div class="post-meta">
-        <span class="attr">发布于：<span>2017-09-16 17:06:41</span></span>
-        
-        
-        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
-</span>
-
-    </div>
-    <div class="post-content ">
-        <h4 id="decode"><a href="#decode" class="headerlink" title="decode()"></a>decode()</h4><p>decode(column,if_value,value,else if_value,value)<br>例子：select decode(score,’A’,’优秀’,’B’,’良好’,’C’,’及格’,’不及格’) from t_table<br>–sum<br>求和函数<br>–wm_concat<br>该函数可以把列值以”,”号分隔起来,并显示成一行</p>
-<h4 id="常用sql"><a href="#常用sql" class="headerlink" title="常用sql"></a>常用sql</h4><p>-新建用户<br>create user xx identified by xx;<br>–给用户权限<br>grant dba to zhaopei ;<br>-删除表字段<br>alter table Tbl_Survey_Human_New DROP COLUMN 字段名;<br>alter table Tbl_Survey_Human_New DROP COLUMN n_oa_report_FLAG;<br>alter table Tbl_Survey_Human_New add(字段名 字段类型);<br>alter table Tbl_Survey_Human_New add(n_protocaryon_report_FLAG varchar2(2));<br>–修改表字段<br>alter table Tbl_Survey_Human_New modify(字段名 字段类型);<br>alter table Tbl_Survey_Human_New modify(c_caseisreal_type varchar2(30));</p>
-<p>-创建序列</p>
-<p>create sequence mysq<br>minvalue 1                   –最小值<br>maxvalue 99999999999999999   –最大值<br>start with 1                 –开始值<br>increment by 1               –每次增长值<br>cache 20;                    –缓存大小</p>
-<h4 id="case-when-amp-amp-case-when"><a href="#case-when-amp-amp-case-when" class="headerlink" title="case when &amp;&amp; case .. when"></a>case when &amp;&amp; case .. when</h4><p>CASE sex<br>WHEN ‘1’ THEN ‘男’<br>WHEN ‘2’ THEN ‘女’<br>ELSE ‘其他’ END<br>–Case搜索函数  </p>
-<p>CASE<br>WHEN sex = ‘1’ THEN ‘男’<br>WHEN sex = ‘2’ THEN ‘女’<br>ELSE ‘其他’ END<br>–查询相同条件的其中一条数据<br>select * from tb k_id in (select min(k_id) from tb group by d_id)</p>
-
-        
-        <br>
-        <div id="comment-container">
-        </div>
-        <div id="disqus_thread"></div>
-
-        <div id="lv-container">
-        </div>
-
-    </div>
+        <div id="tag_cloud" class="tags">
+    
 </div>
+
+<!-- 标签列表 -->
+
+
     </div>
 </div>
 
@@ -196,31 +164,12 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = true
+    window.isPost = false
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-    <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-        */
-        if( '' || '')
-        var disqus_config = function () {
-            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://airclouds-blog.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
 
 
 

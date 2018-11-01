@@ -11,7 +11,7 @@
 
     <title>
         
-        Redis数据类型 - undefined
+        About - undefined
         
     </title>
 
@@ -71,7 +71,7 @@
                     <span>存档</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
                     <span>关于</span>
@@ -80,10 +80,6 @@
             
         </ul>
     </div>
-    
-        <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis数据类型"><span class="toc-text">Redis数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-字符串类型。"><span class="toc-text">1.字符串类型。</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-哈希"><span class="toc-text">2.哈希</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-列表"><span class="toc-text">3.列表</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-集合"><span class="toc-text">4.集合</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-有序集合"><span class="toc-text">5.有序集合</span></a></li></ol></li></ol>
-</div>
     
 </div>
 
@@ -108,43 +104,19 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-
-
-<div class="post-container">
-    <div class="post-title">
-        Redis数据类型
-    </div>
-
-    <div class="post-meta">
-        <span class="attr">发布于：<span>2018-04-06 20:11:00</span></span>
-        
-        
-        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
-</span>
-
-    </div>
-    <div class="post-content ">
-        <h4 id="Redis数据类型"><a href="#Redis数据类型" class="headerlink" title="Redis数据类型"></a>Redis数据类型</h4><blockquote>
-<p>摘要：我们通常使用关系型数据库存储大量的业务数据，那么在高并发的场景下，将常用的数据缓存起来，避免大量的数据库请求，这时候缓存的优势就很明显了，redis作为缓存的一种实现方式，将数据存储在内存中，那么我们访问缓存的效率就明显提升了。本文介绍了redis的基本数据类型，包含字符串，哈希，列表，集合，有序集合。本文只在基础的角度作为学习，对于redis的实现还未学习（笑哭）..</p>
+<div class="post-content ">
+    <blockquote>
+<p>这月色</p>
 </blockquote>
-<hr>
-<h6 id="1-字符串类型。"><a href="#1-字符串类型。" class="headerlink" title="1.字符串类型。"></a>1.字符串类型。</h6><p>字符串String类型是基本的数据类型,作为一种常用的数据类型，可以为（整数，浮点型和字符串），常用的命令有<br>get 获取某个键的值 get xx<br>set 设置某个键的值 set xx hello<br>decr 自减 decr xx 针对integer<br>incr 自增 incr xx<br>mget 如果给定的 key 里面，有某个 key 不存在，那么这个 key 返回特殊值 nil</p>
-<h6 id="2-哈希"><a href="#2-哈希" class="headerlink" title="2.哈希"></a>2.哈希</h6><p>Redis hash 是一个键值对集合。<br>Redis hash是一个string类型的field和value的映射表，hash适合用于存储对象。比较类似于Java中的map</p>
-<h6 id="3-列表"><a href="#3-列表" class="headerlink" title="3.列表"></a>3.列表</h6><p>列表就是一个List存储集合，按照插入顺序排序。你可以添加一个元素导列表的头部（左边）或者尾部（右边）。它的底层实际是个链表</p>
-<h6 id="4-集合"><a href="#4-集合" class="headerlink" title="4.集合"></a>4.集合</h6><p>Redis的Set是string类型的无序集合。它是通过HashTable实现实现的，</p>
-<h6 id="5-有序集合"><a href="#5-有序集合" class="headerlink" title="5.有序集合"></a>5.有序集合</h6><p>Redis zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。<br>不同的是每个元素都会关联一个double类型的分数。<br>redis正是通过分数来为集合中的成员进行从小到大的排序。zset的成员是唯一的,但分数(score)却可以重复。</p>
+<p>这几天心里颇不宁静。今晚在院子里坐着乘凉，忽然想起日日走过的荷塘，在这满月的月光里，总该另有一番样子吧。月亮渐渐地升高了，墙外马路上孩子们的欢笑，已经听不见了；妻在屋里拍着闰儿，迷迷糊糊地哼着眠歌。我悄悄地披了大衫，带上门出去。<br>　　沿着荷塘，是一条曲折的小煤屑路。这是一条幽僻的路；白天也少人走，夜晚更加寂寞。荷塘四面，长着许多树，蓊蓊(wěng)郁郁的。路的一旁，是些杨柳，和一些不知道名字的树。没有月光的晚上，这路上阴森森的，有些怕人。今晚却很好，虽然月光也还是淡淡的。<br>　　路上只我一个人，背着手踱着。这一片天地好像是我的；我也像超出了平常的自己，到了另一世界里。我爱热闹，也爱冷静；爱群居，也爱独处。像今晚上，一个人在这苍茫的月下，什么都可以想，什么都可以不想，便觉是个自由的人。白天里一定要做的事，一定要说的话，现在都可不理。这是独处的妙处，我且受用这无边的荷香月色好了。<br>　　曲曲折折的荷塘上面，弥望的是田田的叶子。叶子出水很高，像亭亭的舞女的裙。层层的叶子中间，零星地点缀着些白花，有袅娜(niǎo,nuó)地开着的，有羞涩地打着朵儿的；正如一粒粒的明珠，又如碧天里的星星，又如刚出浴的美人。微风过处，送来缕缕清香，仿佛远处高楼上渺茫的歌声似的。这时候叶子与花也有一丝的颤动，像闪电一般，霎时传过荷塘的那边去了。叶子本是肩并肩密密地挨着，这便宛然有了一道凝碧的波痕。叶子底下是脉脉(mò)的流水，遮住了，不能见一些颜色；而叶子却更见风致了。<br>　　月光如流水一般，静静地泻在这一片叶子和花上。薄薄的青雾浮起在荷塘里。叶子和花仿佛在牛乳中洗过一样；又像笼着轻纱的梦。虽然是满月，天上却有一层淡淡的云，所以不能朗照；但我以为这恰是到了好处——酣眠固不可少，小睡也别有风味的。月光是隔了树照过来的，高处丛生的灌木，落下参差的斑驳的黑影，峭楞楞如鬼一般；弯弯的杨柳的稀疏的倩影，却又像是画在荷叶上。塘中的月色并不均匀；但光与影有着和谐的旋律，如梵婀(ē)玲(英语violin小提琴的译音)上奏着的名曲。<br>　　荷塘的四面，远远近近，高高低低都是树，而杨柳最多。这些树将一片荷塘重重围住；只在小路一旁，漏着几段空隙，像是特为月光留下的。树色一例是阴阴的，乍看像一团烟雾；但杨柳的丰姿，便在烟雾里也辨得出。树梢上隐隐约约的是一带远山，只有些大意罢了。树缝里也漏着一两点路灯光，没精打采的，是渴睡人的眼。这时候最热闹的，要数树上的蝉声与水里的蛙声；但热闹是他们的，我什么也没有。<br>　　忽然想起采莲的事情来了。采莲是江南的旧俗，似乎很早就有，而六朝时为盛；从诗歌里可以约略知道。采莲的是少年的女子，她们是荡着小船，唱着艳歌去的。采莲人不用说很多，还有看采莲的人。那是一个热闹的季节，也是一个风流的季节。梁元帝《采莲赋》里说得好：<br>　　于是妖童媛(yuán)女，荡舟心许；鷁(yì)首徐回，兼传羽杯；欋(zhào)将移而藻挂，船欲动而萍开。尔其纤腰束素，迁延顾步；夏始春余，叶嫩花初，恐沾裳而浅笑，畏倾船而敛裾(jū)。<br>　　可见当时嬉游的光景了。这真是有趣的事，可惜我们现在早已无福消受了。<br>　　于是又记起《西洲曲》里的句子：<br>　　采莲南塘秋，莲花过人头；低头弄莲子，莲子清如水。今晚若有采莲人，这儿的莲花也算得“过人头”了；只不见一些流水的影子，是不行的。这令我到底惦着江南了。<br>　　这样想着，猛一抬头，不觉已是自己的门前；轻轻地推门进去，什么声息也没有，妻已睡熟好久了</p>
 
-        
-        <br>
-        <div id="comment-container">
-        </div>
-        <div id="disqus_thread"></div>
-
-        <div id="lv-container">
-        </div>
-
+    
+    <div id="comment-container">
+    </div>
+    <div id="lv-container">
     </div>
 </div>
+
     </div>
 </div>
 
@@ -154,7 +126,7 @@
         
         
         <li>
-            <a target="_blank" href="https://www.zhihu.com/people/ai-er-lan-xue-da">
+            <a target="_blank" href="https://www.zhihu.com/people/nu-nu-60-33">
                             <span class="fa-stack fa-lg">
                                  <i class="iconfont icon-zhihu"></i>
                             </span>
@@ -164,7 +136,7 @@
 
         
         <li>
-            <a target="_blank" href="http://weibo.com/linruo1004">
+            <a target="_blank" href="http://weibo.com/2726730950">
                             <span class="fa-stack fa-lg">
                                   <i class="iconfont icon-weibo"></i>
                             </span>
@@ -199,7 +171,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = true
+    window.isPost = false
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
